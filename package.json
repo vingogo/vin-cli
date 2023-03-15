@@ -2,6 +2,7 @@
   "name": "@vingogo/vin-cli",
   "version": "0.1.0",
   "description": "vin-cli",
+  "private": false,
   "bin": {
     "vin": "./lib/index.js"
   },
@@ -15,7 +16,7 @@
   "scripts": {
     "build": "babel --out-dir lib ./src --extensions .tsx,.ts,.jsx,.js --copy-files --delete-dir-on-start",
     "dev": "babel --out-dir lib ./src --extensions .tsx,.ts,.jsx,.js --copy-files --watch --delete-dir-on-start",
-    "ci:publish": "npm publish",
+    "publish": "npm publish --access public",
     "commit": "cz",
     "commitlint": "commitlint --edit $1",
     "lint-staged": "lint-staged",
