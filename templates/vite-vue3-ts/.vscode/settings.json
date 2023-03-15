@@ -1,0 +1,26 @@
+{
+  "files.associations": {},
+  "editor.wordWrap": "off",
+  "editor.formatOnSave": true, //每次保存自动格式化
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/node_modules": false
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  // prettier
+  "prettier.configPath": ".prettierrc",
+  "prettier.eslintIntegration": true,
+  // eslint
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "overrideConfigFile": ".eslintrc.json"
+  }
+}
