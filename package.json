@@ -1,6 +1,6 @@
 {
   "name": "@vingogo/vin-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vin-cli",
   "private": false,
   "bin": {
