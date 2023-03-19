@@ -1,12 +1,15 @@
 import fs from 'fs-extra';
 import path from 'path';
 import inquirer from 'inquirer';
-import templateConfig from '../config/template';
-import replaceFileContext from '../utils/replaceFileContext';
-import queryFiles from '../utils/queryFiles';
+import { templateConfig } from '../common/config.js';
+import { replaceFileContext } from '../utils/replaceFileContext.js';
+import { queryFiles } from '../utils/queryFiles.js';
+import { dirname, CWD } from '../common/constant.js';
+
+const { resolve } = path;
 
 // 初始化模版
-const template = () => {
+export const template = () => {
   inquirer
     .prompt([
       {
@@ -34,12 +37,10 @@ const template = () => {
       }
     ])
     .then(({ template, ...params }) => {
-      const tempPath = path.resolve(__dirname, `./../../templates/${template}`);
-      const midPath = path.resolve(__dirname, `./${template}`);
-      const dist = path.resolve(process.cwd(), `./`);
-      fs.copySync(tempPath, midPath, {
-        overwrite: true
-      });
+      const tempPath = resolve(dirname, `./../../templates/${template}`);
+      const midPath = resolve(dirname, `./${template}`);
+      const dist = resolve(CWD, `./`);
+      fs.copySync(tempPath, midPath, { overwrite: true });
 
       // 根据输入的
       queryFiles(midPath, ['.json', '.html', '.js', '.ts', '.tsx', '.md']).forEach(
@@ -52,13 +53,9 @@ const template = () => {
           });
         }
       );
-      fs.copySync(midPath, dist, {
-        overwrite: true
-      });
+      fs.copySync(midPath, dist, { overwrite: true });
       setTimeout(() => {
         fs.removeSync(midPath);
       });
     });
 };
-
-export default template;

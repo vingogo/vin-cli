@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 
 // 通过后缀筛选查询文件
-const queryFiles = (
+export const queryFiles = (
   dir: string,
   exts: string[] = [],
   list: string[] = []
@@ -22,5 +22,3 @@ const queryFiles = (
   });
   return list;
 };
-
-export default queryFiles;

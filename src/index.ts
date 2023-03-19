@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 import commander from 'commander';
-import template from './template';
-import packageJson from '../package.json';
+import { getCliVersion } from './utils/fsUtils.js'
 
 const program = new commander.Command();
 
@@ -10,15 +9,16 @@ const program = new commander.Command();
 program
   .command('template')
   .description('自动生成模版')
-  .action(() => {
+  .action(async () => {
+    const { template } = await import('./template/index.js');
     template();
   });
 
 // 当前包版本
-program.action(() => {
+program.action(async () => {
   const options = program.opts();
   if (options.version) {
-    console.log(packageJson.version);
+    console.log(getCliVersion());
   }
 });
 program.option('-v, --version', '当前包版本');
