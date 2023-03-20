@@ -13,7 +13,7 @@ const { readFile, outputFileSync } = fse;
 export async function compileSFC(sfc: string, { format = 'esm', dist = 'dist' }: { format: Format; dist: string }) {
   const sources: string = await readFile(sfc, 'utf-8')
   const { descriptor } = parseSFC(sources, { sourceMap: false })
-  const { script, scriptSetup, styles } = descriptor
+  const { script, scriptSetup, styles, template } = descriptor
 
   let scriptContent
 
@@ -21,9 +21,12 @@ export async function compileSFC(sfc: string, { format = 'esm', dist = 'dist' }:
   if (script || scriptSetup) {
     if (script?.content) {
       scriptContent = await compileScript(script.content, format)
-      const jsFilePath = replaceExt(sfc, '.js');
+      // const jsFilePath = replaceExt(sfc, '.js');
 
-      outputFileSync(resolve(dist, jsFilePath), scriptContent);
+      // outputFileSync(resolve(dist, jsFilePath), scriptContent);
+      outputFileSync(resolve(dist, replaceExt(sfc, '.vue')), `
+        <template>${template?.content}</template>\n<script>${scriptContent}</script>
+      `.trim())
     }
   }
 
