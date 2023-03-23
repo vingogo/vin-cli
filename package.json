@@ -70,6 +70,7 @@
     "@babel/plugin-transform-typescript": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3070120230210001",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.26.0",
     "@vitejs/plugin-legacy": "^2.2.0",

@@ -5,13 +5,35 @@ import { getCliVersion } from './utils/fsUtils.js'
 
 const program = new commander.Command();
 
-// 生成项目文档
+// 生成项目
 program
   .command('template')
   .description('自动生成模版')
   .action(async () => {
     const { template } = await import('./template/index.js');
     template();
+  });
+
+// 构建项目
+program.option('--no-cache', '<build --no-cache>: development 禁用缓存');
+program.option('--port <port>', '<build --port 8000>: 指定端口');
+program.option('--platform <platform>', '<build --platform h5>: 构建制定平台');
+program
+  .command('dev')
+  .description('开发模式')
+  .action(async () => {
+    const { build } = await import('./build/index.js');
+
+    build({ ...(program?.opts?.()), development: true });
+  });
+
+program
+  .command('build')
+  .description('构建项目')
+  .action(async () => {
+    const { build } = await import('./build/index.js');
+
+    build(program?.opts?.());
   });
 
 // compiler

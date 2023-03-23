@@ -4,7 +4,7 @@ import { getDirname } from '../utils/fsUtils.js'
 
 export const dirname = getDirname(import.meta.url)
 export const CWD = process.cwd();
-export const VIN_CONFIG_FILE = resolve(CWD, 'vin.config.mjs');
+export const VIN_CONFIG_FILE = resolve(CWD, 'vite.config.mjs');
 export const CLI_PACKAGE_JSON = resolve(dirname, '../../package.json')
 
 async function getVinConfigAsync(): Promise<UserConfig> {
