@@ -1,4 +1,3 @@
-import vinConfig from '../common/vinConfig.js';
 import viteBuild from './vite/index.js';
 
 import type { EnvType } from './index.d';
@@ -6,7 +5,7 @@ import type { EnvType } from './index.d';
 let env: EnvType = 'production';
 
 export const build = (options: any = {}) => {
-  const { development, framework = vinConfig.framework } = options;
+  const { development, framework = 'uniapp' } = options;
   if (
     development ||
     process.env.BUILD_ENV === 'local' ||

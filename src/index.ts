@@ -15,16 +15,18 @@ program
   });
 
 // 构建项目
+const defaultOptions = { platform: 'h5', port: 3000 };
+
 program.option('--no-cache', '<build --no-cache>: development 禁用缓存');
-program.option('--port <port>', '<build --port 8000>: 指定端口');
-program.option('--platform <platform>', '<build --platform h5>: 构建制定平台');
+program.option('--port <port>', '<build --port 3000>: 指定端口');
+program.option('--platform <platform>', '<build --platform h5>: 构建指定平台');
 program
   .command('dev')
   .description('开发模式')
   .action(async () => {
     const { build } = await import('./build/index.js');
 
-    build({ ...(program?.opts?.()), development: true });
+    build({ ...defaultOptions, ...(program?.opts?.() || {}), development: true });
   });
 
 program
@@ -33,7 +35,7 @@ program
   .action(async () => {
     const { build } = await import('./build/index.js');
 
-    build(program?.opts?.());
+    build({ ...defaultOptions, ...(program?.opts?.() || {}) });
   });
 
 // compiler
