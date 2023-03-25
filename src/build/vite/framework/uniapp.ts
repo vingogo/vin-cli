@@ -7,7 +7,7 @@ async function createVite(
   options: Options
 ) {
   if (env === 'development') {
-    runDev({ ...options, logLevel: 'error' });
+    runDev({ ...options });
   } else {
     runBuild({ ...options });
   }
