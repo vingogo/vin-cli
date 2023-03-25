@@ -17,14 +17,26 @@ pnpm add @vingogo/vin-cli -g
 
 ## 使用
 
-使用帮助：
+- 使用帮助：
 
 ```shell
 vin -h
 ```
 
-创建一个开发模板：
+- 创建一个开发模板：
 
 ```shell
 vin template
+```
+
+- 启动 uniapp cli 项目开发模式：
+
+```shell
+vin dev
+```
+
+- 启动 uniapp cli 项目构建模式：
+
+```shell
+vin build
 ```
