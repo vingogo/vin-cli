@@ -1,8 +1,12 @@
 export const templateConfig = [
   {
-    name: 'uni-app',
-    value: 'vite-vue3-ts'
+    name: 'vite-vue3',
+    value: 'vite-vue3'
   },
+  {
+    name: 'vite-vue3-ts',
+    value: 'vite-vue3-ts'
+  }
 ];
 
 export const platformConfig = [
