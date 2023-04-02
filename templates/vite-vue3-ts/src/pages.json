@@ -16,7 +16,7 @@
 	"easycom": {
 		"autoscan": true,
 		"custom": {
-			"^vin-(.*)": "@vingogo/uni-ui/components/$1/index.vue"
+			"^vin-(.*)": "@vingogo/uni-ui/lib/components/$1/index.vue"
 		}
 	}
 }
