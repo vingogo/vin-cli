@@ -1,6 +1,6 @@
 {
   "name": "@vingogo/vin-cli",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "type": "module",
   "description": "vin-cli",
   "private": false,
