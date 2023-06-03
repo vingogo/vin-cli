@@ -30,7 +30,7 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-3070920230324001",
     "@dcloudio/uni-mp-weixin": "3.0.0-3070920230324001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3070920230324001",
-    "@vingogo/uni-ui": "^0.2.0",
+    "@vingogo/uni-ui": "^0.5.0",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"
   },
