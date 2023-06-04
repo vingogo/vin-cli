@@ -40,3 +40,9 @@ vin dev
 ```shell
 vin build
 ```
+
+## 联系
+
+有关 vin-cli 的问题，欢迎添加微信交流，加微信请备注：vin-cli
+
+![wechat](https://cdn.vingogo.cn/wechat.jpg)
