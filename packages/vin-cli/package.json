@@ -18,10 +18,7 @@
     "build": "rimraf ./lib && tsc",
     "dev": "tsc --watch",
     "publish": "npm publish --access public",
-    "commit": "cz",
-    "commitlint": "commitlint --edit $1",
-    "lint-staged": "lint-staged",
-    "husky": "husky install"
+    "ts-check": "tsc --noEmit --project tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -33,34 +30,11 @@
     "url": "https://github.com/vingogo/vin-cli/issues"
   },
   "homepage": "https://github.com/vingogo/vin-cli#readme",
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --config ./.prettierrc.js --write"
-    ],
-    "**/*.json": [
-      "prettier --config ./.prettierrc.js --write"
-    ]
-  },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
     "@types/fs-extra": "^9.0.13",
     "@types/hash-sum": "^1.0.0",
     "@types/inquirer": "^9.0.3",
-    "@types/node": "^16.11.7",
-    "@types/require-from-string": "^1.2.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.1.2"
+    "@types/require-from-string": "^1.2.1"
   },
   "dependencies": {
     "@babel/cli": "^7.14.3",

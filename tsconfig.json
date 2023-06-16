@@ -1,5 +1,5 @@
 {
-  "extends": "./packages/tsconfig/node/tsconfig.json",
+  "extends": "@vingogo/tsconfig/node",
   "compilerOptions": {
     "module": "es2022",
     "outDir": "lib",
