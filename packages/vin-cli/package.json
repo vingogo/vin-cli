@@ -1,7 +1,23 @@
 {
-  "name": "root",
+  "name": "@vingogo/vin-cli",
+  "version": "0.4.1",
+  "type": "module",
+  "description": "vin-cli",
   "private": false,
+  "bin": {
+    "vin": "./lib/index.js"
+  },
+  "main": "./lib/main.js",
+  "typings": "./types/index.d.ts",
+  "files": [
+    "lib",
+    "templates",
+    "types"
+  ],
   "scripts": {
+    "build": "rimraf ./lib && tsc",
+    "dev": "tsc --watch",
+    "publish": "npm publish --access public",
     "commit": "cz",
     "commitlint": "commitlint --edit $1",
     "lint-staged": "lint-staged",
@@ -39,7 +55,6 @@
     "@types/inquirer": "^9.0.3",
     "@types/node": "^16.11.7",
     "@types/require-from-string": "^1.2.1",
-    "@vingogo/tsconfig": "workspace:^",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",

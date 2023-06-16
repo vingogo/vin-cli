@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node" /* 用于选择模块解析策略，有'node'和'classic'两种类型. */,
+    "resolveJsonModule": true /* 支持 JSON */,
+    "allowJs": true /* 允许使用 JS */,
+    "removeComments": false /* 编译的时候删除注释. */,
+    "esModuleInterop": true /* 输出额外的 JS 代码以兼容对 CommonJS 模块的导入. 该选项同时会启用 'allowSyntheticDefaultImports' 以保证类型兼容 */,
+    "forceConsistentCasingInFileNames": true /* 要求导入的文件名大小写敏感  */,
+    "strict": true /* 启用所有严格检查选项 */,
+    "noFallthroughCasesInSwitch": true /* 用于检查switch中是否有case没有使用break跳出switch. */,
+    "noUncheckedIndexedAccess": true /* 使用索引时将 undefined 添加到类型中任何未声明的字段. */,
+    "allowUnreachableCode": false /* 不报告执行不到的代码错误. */,
+    "skipLibCheck": true /* 不对所有的 d.ts 都做检查, 规避不必要的三方包 TS 错误 */
+  }
+}
