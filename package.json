@@ -6,7 +6,9 @@
     "commitlint": "commitlint --edit $1",
     "lint-staged": "lint-staged",
     "husky": "husky install",
-    "build": "pnpm -r --filter=./packages/* run build"
+    "build": "pnpm -r --filter=./packages/* run build",
+    "ci:version": "changeset version && pnpm install --frozen-lockfile false",
+    "ci:publish": "pnpm build && changeset publish"
   },
   "repository": {
     "type": "git",
