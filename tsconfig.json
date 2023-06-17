@@ -1,16 +1,12 @@
 {
+  "extends": "@vingogo/tsconfig/node",
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "strict": true,
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "lib": ["esnext", "dom"],
-    "target": "ES2019",
-    "outDir": "./lib",
+    "module": "es2022",
+    "outDir": "lib",
+    "paths": {
+      "@vingogo/*": ["./src/*"]
+    },
     "declaration": true
   },
-  "include": ["src/**/*"]
+  "exclude": ["node_modules", "lib", "__tests__"]
 }

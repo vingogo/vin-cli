@@ -1,0 +1,10 @@
+{
+  "extends": "../base/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "isolatedModules": true,
+    "noEmit": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext"
+  }
+}

@@ -33,9 +33,9 @@ export async function compileSFC(sfc: string, { format = 'esm', dist = 'dist' }:
   // style
   const cssPreprocessorOptions = (await getVinConfig()).css?.preprocessorOptions;
   for (let index = 0; index < styles.length; index++) {
-    const style: SFCStyleBlock = styles[index]
+    const style = styles[index]
 
-    if (style.lang === 'scss') {
+    if (style?.lang === 'scss') {
       const cssFilePath = replaceExt(sfc, '.css');
 
       const code = await compileScss(style.content, cssPreprocessorOptions?.['scss'])
