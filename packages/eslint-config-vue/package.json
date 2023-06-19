@@ -9,6 +9,9 @@
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Alvin",
   "license": "MIT",
   "dependencies": {
