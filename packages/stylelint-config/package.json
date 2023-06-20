@@ -1,6 +1,6 @@
 {
   "name": "@vingogo/stylelint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "vingogo stylelint-config",
   "main": "index.js",
   "keywords": [
