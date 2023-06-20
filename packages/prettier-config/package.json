@@ -1,0 +1,27 @@
+{
+  "name": "@vingogo/prettier-config",
+  "version": "0.0.0",
+  "description": "vingogo prettier-config",
+  "main": "index.json",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "files": [
+    "index.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vingogo/vin-cli.git",
+    "directory": "packages/prettier-config"
+  },
+  "author": "Alvin",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": "^2.6.2"
+  }
+}

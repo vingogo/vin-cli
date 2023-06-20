@@ -75,6 +75,12 @@ importers:
         specifier: ^9.0.1
         version: 9.15.0(eslint@7.32.0)
 
+  packages/prettier-config:
+    dependencies:
+      prettier:
+        specifier: ^2.6.2
+        version: 2.8.8
+
   packages/stylelint-config:
     dependencies:
       stylelint:
