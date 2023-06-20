@@ -4,7 +4,8 @@
   "description": "vingogo stylelint-config",
   "main": "index.js",
   "keywords": [
-    "eslint-config"
+    "stylelint",
+    "stylelint-config"
   ],
   "files": [
     "index.js"
