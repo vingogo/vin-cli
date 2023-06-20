@@ -1,6 +1,6 @@
 {
   "name": "@vingogo/eslint-config-vue",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "vingogo eslint-config-vue",
   "main": "index.js",
   "keywords": [
