@@ -1,5 +1,11 @@
 # @vingogo/eslint-config-vue
 
+## 0.2.2
+
+### Patch Changes
+
+- cbe7ffb: docs: update readme.md
+
 ## 0.2.1
 
 ### Patch Changes
