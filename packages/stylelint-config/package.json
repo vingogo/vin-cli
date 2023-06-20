@@ -1,0 +1,34 @@
+{
+  "name": "@vingogo/stylelint-config",
+  "version": "0.0.0",
+  "description": "vingogo stylelint-config",
+  "main": "index.js",
+  "keywords": [
+    "eslint-config"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vingogo/vin-cli.git",
+    "directory": "packages/stylelint-config"
+  },
+  "author": "Alvin",
+  "license": "MIT",
+  "dependencies": {
+    "stylelint-prettier": "^3.0.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=13.13.1"
+  }
+}
