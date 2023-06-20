@@ -1,16 +1,23 @@
 {
   "name": "@vingogo/eslint-config-vue",
   "version": "0.2.0",
-  "description": "",
+  "description": "vingogo eslint-config-vue",
   "main": "index.js",
   "keywords": [
+    "eslint",
     "eslint-config"
   ],
   "files": [
     "index.js"
   ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vingogo/vin-cli.git",
+    "directory": "packages/eslint-config-vue"
   },
   "author": "Alvin",
   "license": "MIT",
