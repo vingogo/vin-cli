@@ -7,7 +7,7 @@
 Install:
 
 ```bash
-pnpm add @vingogo/prettier-config prettier --dev
+pnpm add @vingogo/prettier-config prettier -D
 ```
 
 ### 配置

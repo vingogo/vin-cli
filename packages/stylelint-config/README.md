@@ -7,7 +7,7 @@
 Install:
 
 ```bash
-pnpm add @vingogo/stylelint-config stylelint --dev
+pnpm add @vingogo/stylelint-config stylelint -D
 ```
 
 ### 配置

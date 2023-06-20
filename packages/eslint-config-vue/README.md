@@ -9,7 +9,7 @@
 Install:
 
 ```bash
-pnpm add @vingogo/eslint-config-vue eslint --dev
+pnpm add @vingogo/eslint-config-vue eslint -D
 ```
 
 ### 配置

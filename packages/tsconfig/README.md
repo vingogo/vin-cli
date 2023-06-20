@@ -4,6 +4,7 @@ tsconfig 常用配置文件，包含：
 
 - 基础配置：tsconfig/base
 - node 项目配置：tsconfig/node
+- web 项目配置：tsconfig/web
 
 ## 使用方式
 
