@@ -7,7 +7,7 @@ import type { EnvType } from './index.d';
 let env: EnvType = 'production';
 
 export const build = (options: any = {}) => {
-  const { development, framework = 'uniapp' } = options;
+  const { development, framework = 'uniapp', platform } = options;
   if (
     development ||
     process.env.BUILD_ENV === 'local' ||
@@ -17,6 +17,11 @@ export const build = (options: any = {}) => {
   }
   process.env.NODE_ENV = env;
   process.env.NODE_OPTIONS = process.env.NODE_OPTIONS || '--max-old-space-size=4096';
+
+  if (platform) {
+    viteBuild({ ...options, framework, env, platform });
+    return;
+  }
 
   inquirer
     .prompt([
