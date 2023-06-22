@@ -15,7 +15,7 @@ program
   });
 
 // 构建项目
-const defaultOptions = { platform: 'h5', port: 3000 };
+const defaultOptions = { port: 3000 };
 
 program.option('--no-cache', '<build --no-cache>: development 禁用缓存');
 program.option('--port <port>', '<build --port 3000>: 指定端口');
