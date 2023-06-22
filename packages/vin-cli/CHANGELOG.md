@@ -1,5 +1,11 @@
 # @vingogo/vin-cli
 
+## 0.6.0
+
+### Minor Changes
+
+- a35efb1: fix: version error
+
 ## 0.5.1
 
 ### Patch Changes
